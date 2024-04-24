@@ -9,49 +9,8 @@ import { AuthProvider } from './contexts/AuthContext';
 import AppNavigator from './navigation/AppNavigator';
 
 export default function App() {
-
-  /*
-  
-  const [appIsReady, setAppIsReady] = useState(false);
-
-  useEffect(() => {
-    async function prepare() {
-      
-      console.log('starting app loading screen...');
-      try {
-        // Simulate fetching external resources by delaying for two seconds
-        await new Promise(resolve => setTimeout(resolve, 2000));
-      } catch (e) {
-        console.warn('Failed to load external data:', e);
-      } finally {
-        setAppIsReady(true);
-        console.log('ready!');
-      }
-      
-      setAppIsReady(true);
-    }
-
-    SplashScreen.preventAutoHideAsync();
-    prepare();
-  }, []);
-
-  const onLayoutRootView = useCallback(async () => {
-    if (appIsReady) {
-      await SplashScreen.hideAsync();
-    }
-  }, [appIsReady]);
-
-  if (!appIsReady) {
-    return null;
-  }
-  */
-
-  
-
   return (
-    <AuthProvider 
-    //onLayout={onLayoutRootView}
-    >
+    <AuthProvider >
       <NavigationContainer >
         <AppNavigator />
       </NavigationContainer>
